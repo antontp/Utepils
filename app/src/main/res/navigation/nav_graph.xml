@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/drinkRecipeFragment2">.
+
+    <fragment
+        android:id="@+id/drinkRecipeFragment2"
+        android:name="com.example.utepils.fragments.DrinkRecipeFragment"
+        android:label="DrinkRecipeFragment" >
+        <action
+            android:id="@+id/action_drinkRecipeFragment2_to_drinkFragment2"
+            app:destination="@id/drinkFragment2" />
+        <action
+            android:id="@+id/action_drinkRecipeFragment2_to_weatherFragment2"
+            app:destination="@id/weatherFragment2" />
+        <action
+            android:id="@+id/action_drinkRecipeFragment2_to_mapFragment2"
+            app:destination="@id/mapFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/drinkFragment2"
+        android:name="com.example.utepils.fragments.DrinkFragment"
+        android:label="fragment_drink"
+        tools:layout="@layout/fragment_drink" />
+    <fragment
+        android:id="@+id/mapFragment2"
+        android:name="com.example.utepils.fragments.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment2_to_weatherFragment2"
+            app:destination="@id/weatherFragment2" />
+        <action
+            android:id="@+id/action_mapFragment2_to_drinkRecipeFragment2"
+            app:destination="@id/drinkRecipeFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherFragment2"
+        android:name="com.example.utepils.fragments.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" >
+        <action
+            android:id="@+id/action_weatherFragment2_to_drinkRecipeFragment2"
+            app:destination="@id/drinkRecipeFragment2" />
+        <action
+            android:id="@+id/action_weatherFragment2_to_mapFragment2"
+            app:destination="@id/mapFragment2" />
+    </fragment>
+
+</navigation>
